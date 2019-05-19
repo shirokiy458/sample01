@@ -1,0 +1,17 @@
+@mixin u-mb(){
+  margin-bottom: 20px;
+}
+
+@mixin u-p(){
+  padding: 20px;
+}
+
+@mixin column($justify-content) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: center;
+  @include media-tablet {
+    flex-direction: column;
+  }
+
+}

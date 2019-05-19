@@ -1,0 +1,28 @@
+.gnav {
+  &-list {
+    @include column(space-between);
+    list-style: none;
+    @include media-tablet {
+      flex-direction: column;
+    }
+  }
+  &-item {
+    width: 100%;
+    @include media-tablet {
+      border-top: 1px solid $color-text;
+    }
+    > a {
+      color: $color-text;
+      display: block;
+      padding: 30px 60px;
+      text-align: center;
+      text-decoration: none;
+      &:hover {
+        background: $color-text;
+        color: $color-return;
+        transition: $time-transition;
+      }
+    }
+  }
+}
+

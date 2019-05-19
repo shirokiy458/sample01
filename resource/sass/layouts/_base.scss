@@ -1,0 +1,25 @@
+.wrap-width {
+  max-width: $global-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrap {
+  @extend .wrap-width;
+  position: relative;
+  @include media-pc {
+    width: 100vw;
+  }
+}
+
+@mixin penetrate($padding) {
+  box-sizing: border-box;
+  margin-left: calc(((100vw - 44rem) / 2) * -1);
+  margin-right: calc(((100vw - 44rem) / 2) * -1);
+  padding: $padding calc((100vw - 44rem) / 2);
+  @include media-pc {
+    margin-left: 0;
+    margin-right: 0;
+    padding: $padding;
+  }
+}

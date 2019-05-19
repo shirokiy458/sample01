@@ -1,0 +1,13 @@
+@mixin btn($radius) {
+  -webkit-align-items: center; /* 縦方向中央揃え（Safari用） */
+  align-items: center; /* 縦方向中央揃え */
+  display: flex;
+  border-radius: $radius;
+  box-shadow: 0 3px 6px 1px rgba(0,0,0,0.2);
+  padding: 10px;
+  text-decoration: none;
+  &:hover {
+    box-shadow: 0 3px 6px 5px rgba(0,0,0,0.2);
+    transition: $time-transition;
+  }
+}

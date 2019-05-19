@@ -1,0 +1,25 @@
+.footer {
+  @include column(space-between);
+  &-toPagetop {
+    @include btn(20px);
+    background: $color-accent;
+    color: $color-return;
+    height: 40px;
+    justify-content: center;
+    position: fixed;
+      bottom: 20px;
+      right: 20px;
+    width: 40px;
+  }
+}
+
+.fnav {
+  // background: red;
+  &-list {
+    list-style: none;
+    @include column(flex-start);
+    a {
+      margin-right: 10px;
+    }
+  }
+}

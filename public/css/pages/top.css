@@ -1,1 +1,1 @@
-*{text-align:center}
+.topnews{-webkit-box-sizing:border-box;box-sizing:border-box;margin-left:calc(((100vw - 44rem)/ 2) * -1);margin-right:calc(((100vw - 44rem)/ 2) * -1);padding:1.5em calc((100vw - 44rem)/ 2);background-color:red}

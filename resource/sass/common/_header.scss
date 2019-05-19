@@ -1,0 +1,22 @@
+.header {
+  @include column(space-between);
+  &-btnReserve {
+    @include btn(3px);
+    background: $color-accent;
+    color: $color-return;
+    @include media-tablet {
+      width: 100%;
+    }
+  }
+}
+
+.fixed-reserve {
+  position: fixed;
+    right: 20px;
+    top: 20px;
+  transition: $time-transition;
+  @include media-tablet {
+    right: 0;
+    top: 0;
+  }
+}

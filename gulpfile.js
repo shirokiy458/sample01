@@ -28,7 +28,6 @@ gulp.task('server', function() {
   });
 });
 
-
 // pugコンパイル
 gulp.task('pug', function() {
   // pug配下のファイルをコンパイル。(_から始まるファイルはコンパイルしないようにする)
@@ -50,14 +49,14 @@ gulp.task('sass', function() {
     .pipe(plumber({
         errorHandler: notify.onError('Error: <%= error.message %>')  // デスクトップに通知を出す
     }))
-    //.pipe(sourcemaps.init())
+    .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'expanded' }))
-    //.pipe(sourcemaps.write({includeContent: false}))
-    //.pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(sourcemaps.write({includeContent: false}))
+    .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(autoprefixer())
-    .pipe(mediaquery())
-    .pipe(cleanCss())
-    //.pipe(sourcemaps.write('./map'))
+    // .pipe(mediaquery())
+    // .pipe(cleanCss())
+    .pipe(sourcemaps.write('./map'))
     .pipe(gulp.dest(dist + '/css'))
     .pipe(browser.reload({stream:true}));
 });

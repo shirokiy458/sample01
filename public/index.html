@@ -4,27 +4,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>title</title>
+    <title>trattoria</title>
     <link rel="stylesheet" href="./css/ress.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/pages/top.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP|Open+Sans|Noto+Serif+JP&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body id="pagetop">
     <div class="wrap">
       <header class="header">
-        <p class="text"></p>this is header.</p>
+        <h1 class="header-title"><img src="./img/logo.png" alt="trattoria"></h1>
+        <a href="#reserve" class="header-btnReserve">tel:000-000-000<br>予約する</a>
       </header>
       <nav class="gnav">
         <ul class="gnav-list">
-          <li class="gnav-list-item"><a href="">めにゅー01</a></li>
-          <li class="gnav-list-item"><a href="">めにゅー01</a></li>
-          <li class="gnav-list-item"><a href="">めにゅー01</a></li>
+          <li class="gnav-item"><a href="">Top</a></li>
+          <li class="gnav-item"><a href="">Menu</a></li>
+          <li class="gnav-item"><a href="">Form</a></li>
+          <li class="gnav-item"><a href="">Access</a></li>
         </ul>
       </nav>
-      <main class="top">main!</main>
-      <footer class="footer">
-        <p class="text">this is footer.</p>
-      </footer>
+      <main class="main">
+        <div class="topImage">
+          <img src="./img/img-top.jpg" alt="">
+        </div>
+        <section class="topNews">
+          <h2 class="topNews-title">News</h2>
+          <dl class="topNews-list">
+            <dt class="topNews-date">2019-mm-dd</dt>
+            <dd class="topNews-dec">サイトを公開しました</dd>
+          </dl>
+        </section>
+        <section class="concept">
+          <h2 class="concept-title">Concept</h2>
+          <div class="concept-column">
+            <div class="concept-column01">
+              <p class="concept-desc">
+                <span class="concept-desc-01">トスカーナの</span>
+                <span class="concept-desc-02">モダンな雰囲気で</span>
+                <span class="concept-desc-03">優しいひととき</span>
+              </p>
+            </div>
+            <div class="concept-column02">
+              <p class="concept-image">
+                <img src="http://via.placeholder.com/120x300" alt="いめーじ">
+                <img src="http://via.placeholder.com/120x300" alt="いめーじ">
+                <img src="http://via.placeholder.com/120x300" alt="いめーじ">
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="reserve" id="reserve">
+          <h2 class="reserve-title">Reserve</h2>
+          <div class="reserve-column">
+            <section class="reserve-schedule">
+              <h3 class="reserve-schedule-title">X月の空き状況</h3>
+              <table class="reserve-calendar">
+                <thead>
+                  <tr>
+                    <th>日</th>
+                    <th>月</th>
+                    <th>火</th>
+                    <th>水</th>
+                    <th>木</th>
+                    <th>金</th>
+                    <th>土</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1<a href="">○</a></td>
+                    <td>2<a href="">○</a></td>
+                    <td>3<a href="">○</a></td>
+                    <td>4<a href="">○</a></td>
+                    <td>5<a href="">○</a></td>
+                    <td>6<a href="">○</a></td>
+                    <td>7<a href="">○</a></td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                  </tr>
+                  <tr>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                  </tr>
+                  <tr>
+                    <td>22</td>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                  </tr>
+                  <tr>
+                    <td>29</td>
+                    <td>30</td>
+                    <td>31</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+            <div class="reserve-form">
+              ここに日付選択フォーム
+            </div>
+          </div>
+        </section>
+        <footer class="footer">
+          <nav class="fnav">
+            <ul class="fnav-list">
+              <li class="fnav-item"><a href="">Twitter</a></li>
+              <li class="fnav-item"><a href="">Facebook</a></li>
+              <li class="fnav-item"><a href="">Instagram</a></li>
+            </ul>
+          </nav>
+          <small class="footer-copy">&copy; 2019 shirokiy.</small>
+        </footer>
+        <a href="#pagetop" class="footer-toPagetop">↑</a>
+      </main>
+
     </div>
     <script src="http://code.jquery.com/jquery.min.js"></script>
     <script src="./js/script.js"></script>
