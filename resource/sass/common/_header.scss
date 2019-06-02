@@ -1,12 +1,18 @@
 .header {
   @include column(space-between);
   &-btnReserve {
-    @include btn(3px);
-    background: $color-accent;
+    @include btn(3px,$color-accent,$color-return);
     color: $color-return;
     @include media-tablet {
       width: 100%;
     }
+  }
+  &-caution {
+    background: #999;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px 1px rgba(0,0,0,0.2);
+    color: $color-return;
+    @include u-p;
   }
 }
 

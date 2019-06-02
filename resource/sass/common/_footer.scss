@@ -1,8 +1,7 @@
 .footer {
-  @include column(space-between);
+  // @include column(space-between);
   &-toPagetop {
-    @include btn(20px);
-    background: $color-accent;
+    @include btn(20px,$color-accent,$color-return);
     color: $color-return;
     height: 40px;
     justify-content: center;
@@ -11,15 +10,37 @@
       right: 20px;
     width: 40px;
   }
+  &-copy {
+    display: block;
+    text-align: center;
+  }
 }
 
-.fnav {
+.store {
+  &-title {
+    @include u-mb;
+    text-align: center;
+  }
+  &-info {
+    @include column(space-between);
+  }
+  &-list {
+    > dt {
+      color: lighten($color-text, 15%) ;
+    }
+  }
+}
+
+.snsNav {
   // background: red;
   &-list {
     list-style: none;
     @include column(flex-start);
     a {
       margin-right: 10px;
+      img {
+        width: 30px;
+      }
     }
   }
 }

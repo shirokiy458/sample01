@@ -17,7 +17,7 @@ $(function() {
   var topBtn = $('.footer-toPagetop');
   topBtn.hide();
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 150) {
+    if ($(this).scrollTop() > 100) {
       topBtn.fadeIn();
     } else {
       topBtn.fadeOut();
@@ -29,7 +29,7 @@ $(function() {
 $(function() {
   var reserveBtn = $('.header-btnReserve');
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 150) {
+    if ($(this).scrollTop() > 100) {
       reserveBtn.addClass('fixed-reserve');
     } else {
       reserveBtn.removeClass('fixed-reserve');

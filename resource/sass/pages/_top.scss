@@ -29,17 +29,27 @@
       margin-right: 0;
       padding-right: 0;
     }
-}
+  }
   &-list {
     @include column(flex-start);
   }
   &-date {
     margin-right: 20px;
   }
+  &-more {
+    color: $color-return;
+    margin-left: auto;
+    @include media-tablet {
+      margin-left: 0;
+    }
+  }
 }
 
 .concept {
-  @include u-mb();
+  @include u-mb;
+  &-title {
+    @include u-mb;
+  }
   &-column {
     @include column(space-between);
     &01 {
@@ -71,9 +81,9 @@
 }
 
 .reserve {
-  @include u-mb();
+  @include u-mb;
   &-title {
-    @include u-mb();
+    @include u-mb;
   }
   &-column {
     @include column(space-between);
@@ -85,19 +95,58 @@
   }
   &-calendar {
     border-collapse: collapse;
+    tr:not(:last-of-type) {
+      border-bottom: 1px solid $color-text;
+    }
     th,td {
-      border: 1px solid #666;
       padding: 15px 30px;
       text-align: center;
       @include media-tablet {
         padding: 5px 10px;
-      }    }
+      }
+    }
     th {
-      background: #ccc;
+      background: #ddd;
     }
     a {
       color: $color-accent;
       display: block;
     }
   }
+  &-form {
+    flex-direction: column;
+  }
+  &-dropdown {
+    position: relative;
+    &::before {
+      content: " ";
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 8px solid #666666;
+      position: absolute;
+        top: 15px;
+        right: 10px;
+    }
+  }
+  &-day {
+    background: transparent;
+    box-shadow: 0 3px 6px 1px rgba(0,0,0,0.2);
+    border: 1px solid #666;
+    border-radius: 0px;
+    display: block;
+    padding: 5px 30px 5px 5px;
+    width: 100%;
+    @include u-mb;
+  }
+  &-time {
+    @extend .reserve-day;
+  }
+  &-people {
+    @extend .reserve-day;
+  }
+  &-formBtn {
+    @include btn(5px,$color-accent,$color-return);
+    justify-content: center;
+  }
+
 }
