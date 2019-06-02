@@ -23,6 +23,7 @@ gulp.task("sass", function() {
         cascade: false,
         grid: true // gridの値にtrueを指定する
       }))
+      .pipe(gulp.dest("docs/css", {sourcemaps: 'resource/maps'}))
   );
 });
 
@@ -32,7 +33,7 @@ const browsersync = require("browser-sync").create();
 gulp.task('build-server', function (done) {
   browsersync.init({
     server: {
-      baseDir: "./public/"
+      baseDir: "./docs/"
     },
     browser: "google chrome"
   });
@@ -48,8 +49,8 @@ gulp.task('browser-reload', function (done){
 // 監視ファイル
 gulp.task('watch-files', function(done) {
   gulp.watch("resource/sass/**/*.scss", gulp.task('sass'));
-  gulp.watch("./public/**/*.html", gulp.task('browser-reload'));
-  gulp.watch("./public/css/*.css", gulp.task('browser-reload'));
+  gulp.watch("./docs/**/*.html", gulp.task('browser-reload'));
+  gulp.watch("./docs/css/*.css", gulp.task('browser-reload'));
 //  gulp.watch("./*/*.js", gulp.task('browser-reload'));
   done();
   console.log(('gulp watch started'));
