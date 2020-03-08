@@ -21,13 +21,24 @@
   &-title {
     @include u-mb;
     text-align: center;
+    @include media-tablet {
+      margin-bottom: 5px;
+    }
   }
   &-info {
     @include column(space-between);
+    @include media-tablet {
+      padding: 10px;
+    }
   }
   &-list {
     > dt {
       color: lighten($color-text, 15%) ;
+    }
+  }
+  &-column {
+    @include media-tablet {
+      width: 100%;
     }
   }
 }
@@ -36,7 +47,9 @@
   // background: red;
   &-list {
     list-style: none;
-    @include column(flex-start);
+    display: flex;
+    justify-content: flex-start;
+    // @include column(flex-start);
     a {
       margin-right: 10px;
       img {

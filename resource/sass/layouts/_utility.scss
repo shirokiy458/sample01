@@ -10,8 +10,9 @@
   display: flex;
   justify-content: $justify-content;
   align-items: center;
-  @include media-tablet {
+  @include media-sp {
     flex-direction: column;
+    justify-content: flex-start;
   }
 
 }

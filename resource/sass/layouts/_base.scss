@@ -12,6 +12,12 @@
   }
 }
 
+.section {
+  @include media-tablet {
+    padding: 10px;
+  }
+}
+
 @mixin penetrate($padding) {
   box-sizing: border-box;
   margin-left: calc(((100vw - 44rem) / 2) * -1);

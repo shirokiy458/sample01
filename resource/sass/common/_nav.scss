@@ -17,6 +17,9 @@
       padding: 30px 60px;
       text-align: center;
       text-decoration: none;
+      @include media-tablet {
+        padding: 10px;
+      }
       &:hover {
         background: $color-text;
         color: $color-return;
