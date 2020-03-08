@@ -31,6 +31,7 @@ $time-transition: .2s;
 body {
   color: $color-text;
   font-family: 'Open Sans', sans-serif ,'Noto Sans JP', sans-serif;
+  overflow-x: hidden;
 }
 
 a {
